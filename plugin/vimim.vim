@@ -3200,4 +3200,3 @@ sil!call s:vimim_mapping()
 "sil!call s:vimim_plug_and_play()
 :let g:Vimim_profile = reltime(g:Vimim_profile)
 " ============================================= }}}
-Debug s:vimim_egg_vimim()
