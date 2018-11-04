@@ -3136,15 +3136,12 @@ function! g:Omni()
     sil!exe 'sil!return "' . key . '"'
 endfunction
 
-function! s:vimim_mapping()
-    inoremap <silent><unique> <plug>(vimim-toggle) <c-r>=g:Vimim_chinese()<cr>
-endfunction
-
 " ============================================= }}}
 let s:VimIM += [" ====  core driver      ==== {{{"]
 " =================================================
 
 function! s:vimim_plug_and_play()
+    inoremap <silent> <plug>(vimim-toggle) <c-r>=g:Vimim_chinese()<cr>
     nnoremap <silent> <C-_> i<C-R>=g:Vimim_chinese()<CR><Esc>
     inoremap <unique> <C-_>  <C-R>=g:Vimim_chinese()<CR>
     inoremap <silent> <C-^>  <C-R>=g:Vimim_onekey()<CR>
@@ -3196,7 +3193,6 @@ sil!call s:vimim_set_backend_clouds()
 sil!call s:vimim_set_backend_embedded()
 sil!call s:vimim_set_backend_mycloud()
 sil!call s:vimim_set_im_toggle_list()
-sil!call s:vimim_mapping()
-"sil!call s:vimim_plug_and_play()
+sil!call s:vimim_plug_and_play()
 :let g:Vimim_profile = reltime(g:Vimim_profile)
 " ============================================= }}}
